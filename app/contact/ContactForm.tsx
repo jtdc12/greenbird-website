@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -17,13 +19,28 @@ export default function ContactForm() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailto = `mailto:john.greenbirdnetworksolutions@gmail.com?subject=New Inquiry from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nOrganization: ${form.organization}\nService Needed: ${form.service}\n\nMessage:\n${form.message}`
-    )}`;
-    window.location.href = mailto;
-    setSubmitted(true);
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://formspree.io/f/mojzjaek', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError('Something went wrong. Please try again or call us directly at (732) 497-8917.');
+      }
+    } catch {
+      setError('Something went wrong. Please try again or call us directly at (732) 497-8917.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -86,8 +103,13 @@ export default function ContactForm() {
           className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 resize-none" />
       </div>
 
-      <button type="submit" className="w-full bg-[#2e7d32] hover:bg-[#1b5e20] text-white font-bold py-3 rounded-lg transition-colors text-lg">
-        Send Message
+      {error && (
+        <p className="text-red-500 text-sm text-center">{error}</p>
+      )}
+
+      <button type="submit" disabled={loading}
+        className="w-full bg-[#2e7d32] hover:bg-[#1b5e20] text-white font-bold py-3 rounded-lg transition-colors text-lg disabled:opacity-60 disabled:cursor-not-allowed">
+        {loading ? 'Sending...' : 'Send Message'}
       </button>
 
       <p className="text-xs text-gray-400 text-center">We typically respond within 1 business day.</p>
