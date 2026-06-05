@@ -67,6 +67,54 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Residential Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 text-center md:text-left">
+            <span className="text-5xl mb-4 block">🏠</span>
+            <h2 className="text-3xl font-bold text-[#1b5e20] mb-3">We Also Serve Homeowners</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              It is not just businesses — we bring the same professional quality right to your home. Whether you need faster WiFi, a Ring or Nest security system installed, smart home setup, or a home office network, Greenbird Network Solutions has you covered.
+            </p>
+            <ul className="text-sm text-gray-700 space-y-2 mb-6 inline-block text-left">
+              {[
+                '📶 Whole-home WiFi & mesh networks',
+                '🔔 Ring & Google Nest installation',
+                '📷 Home security cameras',
+                '💼 Home office networking',
+                '🏡 Smart home device setup',
+              ].map(item => (
+                <li key={item} className="flex items-center gap-2"><span className="text-green-500 font-bold">✓</span>{item}</li>
+              ))}
+            </ul>
+            <div className="mt-2">
+              <Link href="/residential" className="bg-[#2e7d32] text-white font-bold px-8 py-3 rounded-lg hover:bg-[#1b5e20] transition-colors inline-block">
+                View Residential Services
+              </Link>
+            </div>
+          </div>
+          <div className="flex-1 bg-green-50 rounded-2xl p-8 border border-green-100 text-center">
+            <h3 className="text-xl font-bold text-[#1b5e20] mb-2">Making IT Simple at Home</h3>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              Technology should make your life easier — not more complicated. We set everything up correctly the first time, explain how it works in plain English, and make sure you are comfortable before we leave.
+            </p>
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              {[
+                { icon: '🗓️', label: 'Flexible Scheduling' },
+                { icon: '💬', label: 'Plain English' },
+                { icon: '🚗', label: 'We Come to You' },
+                { icon: '✅', label: 'Free Quotes' },
+              ].map(item => (
+                <div key={item.label} className="bg-white rounded-xl p-3 shadow-sm flex flex-col items-center gap-1">
+                  <span className="text-2xl">{item.icon}</span>
+                  <span className="text-[#2e7d32] font-semibold text-xs">{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Overview */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
