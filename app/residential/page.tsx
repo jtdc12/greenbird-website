@@ -129,6 +129,103 @@ export default function ResidentialPage() {
         </div>
       </section>
 
+      {/* Solutions by Need & Price */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-[#1b5e20] mb-3">Solutions for Every Budget</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">We don't believe in one-size-fits-all. Whether you want a simple, affordable fix or a premium full-home setup — we find the right solution for your needs and your wallet.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            {/* Good */}
+            <div className="border-2 border-green-100 rounded-2xl p-6 flex flex-col">
+              <div className="bg-green-50 rounded-xl px-4 py-2 text-center mb-4">
+                <span className="text-2xl">👍</span>
+                <h3 className="text-lg font-bold text-[#2e7d32] mt-1">Good</h3>
+                <p className="text-xs text-gray-500">Budget-Friendly Solutions</p>
+              </div>
+              <p className="text-sm text-gray-600 mb-4">Great for renters, smaller homes, or anyone who just needs the basics working reliably. We use quality entry-level equipment that gets the job done without breaking the bank.</p>
+              <ul className="space-y-2 text-sm text-gray-700 flex-1">
+                {[
+                  'Single router WiFi upgrade',
+                  'Basic IP camera setup',
+                  'Ring Video Doorbell (wired)',
+                  'Standard network cabling',
+                  'Simple smart home devices',
+                ].map(item => (
+                  <li key={item} className="flex items-center gap-2"><span className="text-green-400 font-bold">✓</span>{item}</li>
+                ))}
+              </ul>
+              <div className="mt-6 text-center">
+                <span className="text-xs text-gray-400 italic">Best for: apartments, starter homes, renters</span>
+              </div>
+            </div>
+
+            {/* Better */}
+            <div className="border-2 border-[#2e7d32] rounded-2xl p-6 flex flex-col relative shadow-lg">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2e7d32] text-white text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>
+              <div className="bg-green-100 rounded-xl px-4 py-2 text-center mb-4">
+                <span className="text-2xl">⭐</span>
+                <h3 className="text-lg font-bold text-[#1b5e20] mt-1">Better</h3>
+                <p className="text-xs text-gray-500">Mid-Range Solutions</p>
+              </div>
+              <p className="text-sm text-gray-600 mb-4">The sweet spot for most homeowners. Better coverage, better cameras, and smarter devices — without going overboard. A great balance of quality and value.</p>
+              <ul className="space-y-2 text-sm text-gray-700 flex-1">
+                {[
+                  'Mesh WiFi system (whole home)',
+                  'Ring or Nest camera bundle',
+                  'Smart thermostat installation',
+                  'Home office network setup',
+                  'Multi-room cabling',
+                  'Parental controls & guest network',
+                ].map(item => (
+                  <li key={item} className="flex items-center gap-2"><span className="text-green-500 font-bold">✓</span>{item}</li>
+                ))}
+              </ul>
+              <div className="mt-6 text-center">
+                <span className="text-xs text-gray-400 italic">Best for: single-family homes, families</span>
+              </div>
+            </div>
+
+            {/* Best */}
+            <div className="border-2 border-green-100 rounded-2xl p-6 flex flex-col">
+              <div className="bg-green-50 rounded-xl px-4 py-2 text-center mb-4">
+                <span className="text-2xl">🏆</span>
+                <h3 className="text-lg font-bold text-[#2e7d32] mt-1">Best</h3>
+                <p className="text-xs text-gray-500">Premium Full-Home Solutions</p>
+              </div>
+              <p className="text-sm text-gray-600 mb-4">For homeowners who want the full experience — enterprise-grade WiFi, complete security systems, smart home automation, and everything integrated and working together seamlessly.</p>
+              <ul className="space-y-2 text-sm text-gray-700 flex-1">
+                {[
+                  'Enterprise-grade WiFi (no dead zones)',
+                  'Full Ring or Nest security system',
+                  'Smart door locks & access control',
+                  'Complete smart home integration',
+                  'Structured in-wall cabling',
+                  'Dedicated home office network',
+                ].map(item => (
+                  <li key={item} className="flex items-center gap-2"><span className="text-green-600 font-bold">✓</span>{item}</li>
+                ))}
+              </ul>
+              <div className="mt-6 text-center">
+                <span className="text-xs text-gray-400 italic">Best for: larger homes, tech enthusiasts</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom note */}
+          <div className="mt-10 bg-green-50 border border-green-100 rounded-2xl p-6 text-center">
+            <h3 className="text-lg font-bold text-[#1b5e20] mb-2">Not sure which tier is right for you?</h3>
+            <p className="text-gray-600 text-sm mb-4">That's exactly what our free consultation is for. We visit your home, listen to what you need, and recommend only what makes sense — no upselling, no pressure.</p>
+            <Link href="/contact" className="bg-[#2e7d32] text-white font-bold px-8 py-2 rounded-lg hover:bg-[#1b5e20] transition-colors inline-block">
+              Book a Free Home Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Ring & Nest Section */}
       <section className="bg-green-50 py-16 px-4">
         <div className="max-w-5xl mx-auto">
