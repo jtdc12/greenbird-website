@@ -210,7 +210,7 @@ export default function ResidentialPage() {
                 ))}
               </ul>
               <div className="mt-6 text-center">
-                <span className="text-xs text-gray-400 italic">Best for: larger homes, tech enthusiasts</span>
+                <span className="text-xs text-gray-400 italic">Best for: larger homes, tech enthusiasts, home offices</span>
               </div>
             </div>
           </div>
