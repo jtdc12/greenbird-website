@@ -21,7 +21,11 @@ export default function Footer() {
                 john.greenbirdnetworksolutions@gmail.com
               </a>
             </li>
-            <li className="text-green-400 italic">Phone number coming soon</li>
+            <li>
+              <a href="tel:+17324978917" className="hover:text-white transition-colors">
+                (732) 497-8917
+              </a>
+            </li>
           </ul>
         </div>
 

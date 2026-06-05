@@ -26,7 +26,15 @@ export default function ContactPage() {
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold text-[#1b5e20] text-center mb-2">Request a Free Consultation</h2>
-          <p className="text-gray-500 text-center mb-8">We serve small businesses, churches, doctor's offices, and organizations throughout New Jersey.</p>
+          <p className="text-gray-500 text-center mb-2">We serve small businesses, churches, doctor's offices, and organizations throughout New Jersey.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8 text-center">
+            <a href="tel:+17324978917" className="flex items-center justify-center gap-2 text-[#2e7d32] font-semibold hover:text-[#1b5e20] transition-colors">
+              <span>📞</span> (732) 497-8917
+            </a>
+            <a href="mailto:john.greenbirdnetworksolutions@gmail.com" className="flex items-center justify-center gap-2 text-[#2e7d32] font-semibold hover:text-[#1b5e20] transition-colors break-all">
+              <span>✉️</span> john.greenbirdnetworksolutions@gmail.com
+            </a>
+          </div>
           <ContactForm />
         </div>
       </section>
