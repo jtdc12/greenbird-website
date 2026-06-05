@@ -200,7 +200,7 @@ export default function ResidentialPage() {
               <ul className="space-y-2 text-sm text-gray-700 flex-1">
                 {[
                   'Enterprise-grade WiFi (no dead zones)',
-                  'Full Ring or Nest security system',
+                  'Full Ubiquiti security system',
                   'Smart door locks & access control',
                   'Complete smart home integration',
                   'Structured in-wall cabling',
