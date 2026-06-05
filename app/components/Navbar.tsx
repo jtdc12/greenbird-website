@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 55" width="160" height="55">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 55" width="210" height="55">
             {/* Bird */}
             <g transform="translate(4,2) scale(0.42)">
               <path d="M 60 80 C 30 55, 5 65, 0 50 C 15 40, 45 42, 65 60 C 75 40, 90 20, 120 15 C 105 35, 95 55, 85 75 C 100 65, 118 60, 130 65 C 115 72, 95 78, 80 90 C 78 100, 72 108, 60 112 C 55 100, 55 90, 60 80 Z" fill="#a5d6a7"/>
@@ -37,7 +37,7 @@ export default function Navbar() {
             </g>
             {/* Text */}
             <text x="62" y="22" fontSize="15" fontWeight="700" fill="white" fontFamily="Segoe UI, Arial, sans-serif" letterSpacing="0.5">Greenbird</text>
-            <text x="62" y="34" fontSize="8" fontWeight="400" fill="#a5d6a7" fontFamily="Segoe UI, Arial, sans-serif" letterSpacing="2">NETWORK SOLUTIONS</text>
+            <text x="62" y="36" fontSize="7.5" fontWeight="400" fill="#a5d6a7" fontFamily="Segoe UI, Arial, sans-serif" letterSpacing="1.5">NETWORK SOLUTIONS</text>
             <line x1="58" y1="10" x2="58" y2="45" stroke="#4caf50" strokeWidth="1"/>
           </svg>
         </Link>
